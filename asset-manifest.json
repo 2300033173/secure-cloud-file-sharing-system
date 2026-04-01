@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/secure-cloud-file-sharing-system/static/css/main.49e9273c.css",
-    "main.js": "/secure-cloud-file-sharing-system/static/js/main.a92c4cfe.js",
+    "main.js": "/secure-cloud-file-sharing-system/static/js/main.967c6842.js",
     "index.html": "/secure-cloud-file-sharing-system/index.html",
     "main.49e9273c.css.map": "/secure-cloud-file-sharing-system/static/css/main.49e9273c.css.map",
-    "main.a92c4cfe.js.map": "/secure-cloud-file-sharing-system/static/js/main.a92c4cfe.js.map"
+    "main.967c6842.js.map": "/secure-cloud-file-sharing-system/static/js/main.967c6842.js.map"
   },
   "entrypoints": [
     "static/css/main.49e9273c.css",
-    "static/js/main.a92c4cfe.js"
+    "static/js/main.967c6842.js"
   ]
 }
