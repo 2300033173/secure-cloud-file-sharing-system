@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/secure-cloud-file-sharing-system/static/css/main.49e9273c.css",
+    "main.js": "/secure-cloud-file-sharing-system/static/js/main.e077be93.js",
+    "index.html": "/secure-cloud-file-sharing-system/index.html",
+    "main.49e9273c.css.map": "/secure-cloud-file-sharing-system/static/css/main.49e9273c.css.map",
+    "main.e077be93.js.map": "/secure-cloud-file-sharing-system/static/js/main.e077be93.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.49e9273c.css",
+    "static/js/main.e077be93.js"
+  ]
+}
