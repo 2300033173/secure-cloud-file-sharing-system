@@ -1,0 +1,15 @@
+/* index.css — base resets only, Global.css handles all design tokens */
+body {
+  margin: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
+}
+
+a { color: inherit; }
+button { font-family: inherit; }
+input, textarea, select { font-family: inherit; }

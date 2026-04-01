@@ -1,0 +1,38 @@
+/* ═══════════════════════════════════════════════════════════════
+   APP SHELL LAYOUT
+═══════════════════════════════════════════════════════════════ */
+.app-shell {
+  display: flex;
+  min-height: 100vh;
+}
+
+.app-main {
+  flex: 1;
+  margin-left: var(--sidebar-w);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  transition: margin-left var(--t-slow);
+}
+
+.page-content {
+  flex: 1;
+  padding: 28px 32px;
+  margin-top: var(--topbar-h);
+  max-width: 1400px;
+  width: 100%;
+  animation: fadeUp 0.38s var(--t-base) both;
+}
+
+/* Auth pages — full screen, no sidebar/topbar */
+.auth-shell {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 1024px) {
+  .app-main    { margin-left: 0; }
+  .page-content { padding: 20px 16px; }
+}

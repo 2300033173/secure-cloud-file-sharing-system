@@ -1,0 +1,63 @@
+/* ═══════════════════════════════════════════════════════════════
+   ACTIVITY LOGS
+═══════════════════════════════════════════════════════════════ */
+.logs-page { display: flex; flex-direction: column; gap: 20px; }
+
+.logs-header {
+  display: flex; align-items: center;
+  justify-content: space-between; flex-wrap: wrap; gap: 10px;
+}
+.logs-total { font-size: 0.82rem; color: var(--text-500); font-weight: 500; }
+
+.logs-filters {
+  display: flex; flex-wrap: wrap; gap: 10px; align-items: center;
+  padding: 16px 20px;
+  background: var(--bg-card);
+  backdrop-filter: blur(16px);
+  border: 1px solid var(--border-1);
+  border-radius: var(--r-lg);
+  transition: border-color var(--t-base);
+}
+.logs-filters:hover { border-color: var(--border-2); }
+.logs-filters .form-input { min-width: 140px; flex: 1; }
+.logs-filters input[type="date"] { color-scheme: dark; }
+
+.logs-table-wrap {
+  overflow: hidden;
+  background: var(--bg-card);
+  backdrop-filter: blur(16px);
+  border: 1px solid var(--border-1);
+  border-radius: var(--r-lg);
+  transition: border-color var(--t-base);
+}
+.logs-table-wrap:hover { border-color: var(--border-2); }
+.logs-table-scroll { overflow-x: auto; }
+
+.action-badge {
+  display: inline-block; padding: 3px 8px; border-radius: 6px;
+  font-size: 0.70rem; font-weight: 600; text-transform: capitalize;
+  background: rgba(255,255,255,0.07); color: var(--text-300);
+  border: 1px solid rgba(255,255,255,0.10);
+}
+
+.ip-code {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.76rem; color: var(--text-400);
+  background: rgba(255,255,255,0.06);
+  padding: 2px 6px; border-radius: 4px;
+}
+
+.row-failure td { background: rgba(239,68,68,0.04) !important; }
+
+.pagination {
+  display: flex; align-items: center;
+  justify-content: center; gap: 12px; padding: 16px;
+}
+.pagination span { font-size: 0.85rem; color: var(--text-400); font-weight: 500; }
+
+.empty-logs {
+  display: flex; flex-direction: column;
+  align-items: center; padding: 60px 20px;
+  gap: 10px; color: var(--text-500);
+}
+.empty-logs p { font-size: 0.9rem; color: var(--text-400); }

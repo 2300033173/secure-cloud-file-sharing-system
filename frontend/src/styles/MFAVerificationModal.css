@@ -1,0 +1,128 @@
+/* ═══════════════════════════════════════════════════════════════
+   MFA VERIFICATION MODAL
+═══════════════════════════════════════════════════════════════ */
+.mfa-modal-overlay {
+  position: fixed; inset: 0;
+  background: rgba(0,0,0,0.80); backdrop-filter: blur(8px);
+  display: flex; align-items: center; justify-content: center;
+  z-index: 600; padding: 20px;
+}
+
+.mfa-modal {
+  width: 100%; max-width: 420px;
+  background: rgba(10, 16, 30, 0.96);
+  backdrop-filter: blur(24px) saturate(180%);
+  border: 1px solid rgba(6,182,212,0.18);
+  border-radius: var(--r-2xl); padding: 32px;
+  box-shadow: var(--shadow-modal);
+  animation: fadeUp 0.28s var(--t-spring) both;
+  position: relative;
+}
+
+.modal-close-btn {
+  position: absolute; top: 16px; right: 16px;
+  background: none; border: none; color: var(--text-500);
+  cursor: pointer; padding: 6px; border-radius: 7px;
+  font-size: 1.2rem; line-height: 1;
+  transition: all var(--t-fast);
+  display: flex; align-items: center; justify-content: center;
+}
+.modal-close-btn:hover { background: rgba(255,255,255,0.08); color: var(--text-100); }
+
+.mfa-modal h2 {
+  font-size: 1.15rem; font-weight: 800; color: var(--text-100);
+  margin-bottom: 6px; letter-spacing: -0.02em;
+}
+.mfa-modal p { font-size: 0.875rem; color: var(--text-400); margin-bottom: 8px; }
+.action-text strong { color: var(--cyan); }
+
+.send-code-section { display: flex; flex-direction: column; gap: 14px; margin-top: 16px; }
+
+.info-notice {
+  padding: 11px 14px; border-radius: var(--r-md);
+  background: rgba(59,130,246,0.10);
+  border: 1px solid rgba(59,130,246,0.22);
+  font-size: 0.8rem; color: #93c5fd; line-height: 1.5;
+}
+
+.console-reminder {
+  padding: 10px 14px; border-radius: var(--r-md);
+  background: rgba(139,92,246,0.10);
+  border: 1px solid rgba(139,92,246,0.22);
+  font-size: 0.8rem; color: #c4b5fd; margin-bottom: 14px;
+}
+.console-reminder code {
+  background: rgba(255,255,255,0.10);
+  padding: 1px 5px; border-radius: 4px;
+  font-family: 'JetBrains Mono', monospace; color: var(--text-100);
+}
+
+.mfa-modal .form-group { margin-bottom: 14px; }
+.mfa-modal .form-group label {
+  display: block; font-size: 0.72rem; font-weight: 700;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--text-300); margin-bottom: 7px;
+}
+.mfa-modal .form-group input {
+  width: 100%; padding: 12px 14px;
+  background: var(--bg-input);
+  border: 1px solid rgba(255,255,255,0.10);
+  border-radius: var(--r-md); color: var(--text-100);
+  font-size: 1.4rem; font-family: 'JetBrains Mono', monospace;
+  letter-spacing: 0.3em; text-align: center;
+  transition: all var(--t-base);
+}
+.mfa-modal .form-group input:focus {
+  outline: none; border-color: var(--cyan);
+  background: rgba(6,182,212,0.05);
+  box-shadow: 0 0 0 3px rgba(6,182,212,0.14);
+}
+
+.error-message {
+  padding: 10px 14px; border-radius: var(--r-md);
+  background: rgba(239,68,68,0.10); color: #fca5a5;
+  border: 1px solid rgba(239,68,68,0.22);
+  font-size: 0.85rem; margin-bottom: 12px;
+}
+
+.modal-actions { display: flex; gap: 8px; flex-wrap: wrap; }
+.modal-actions .btn-primary  { flex: 2; }
+.modal-actions .btn-secondary { flex: 1; }
+.modal-actions .btn-cancel   { flex: 1; }
+
+/* Local button overrides (scoped to this modal) */
+.mfa-modal .btn-primary {
+  display: flex; align-items: center; justify-content: center; gap: 7px;
+  padding: 10px 18px;
+  background: var(--grad-primary);
+  color: #fff; border: none; border-radius: var(--r-md);
+  font-size: 0.875rem; font-weight: 700; font-family: inherit;
+  cursor: pointer; transition: all var(--t-base);
+}
+.mfa-modal .btn-primary:hover:not(:disabled) {
+  box-shadow: 0 0 20px rgba(6,182,212,0.55), var(--glow-blue);
+  transform: translateY(-1px);
+}
+.mfa-modal .btn-primary:disabled { opacity: 0.45; cursor: not-allowed; }
+
+.mfa-modal .btn-secondary {
+  display: flex; align-items: center; justify-content: center;
+  padding: 10px 14px;
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.10);
+  border-radius: var(--r-md); color: var(--text-300);
+  font-size: 0.875rem; font-weight: 600; font-family: inherit;
+  cursor: pointer; transition: all var(--t-base);
+}
+.mfa-modal .btn-secondary:hover:not(:disabled) { background: rgba(255,255,255,0.12); color: var(--text-100); }
+.mfa-modal .btn-secondary:disabled { opacity: 0.45; cursor: not-allowed; }
+
+.mfa-modal .btn-cancel {
+  display: flex; align-items: center; justify-content: center;
+  padding: 10px 14px; background: none;
+  border: 1px solid rgba(255,255,255,0.10);
+  border-radius: var(--r-md); color: var(--text-500);
+  font-size: 0.875rem; font-weight: 600; font-family: inherit;
+  cursor: pointer; transition: all var(--t-base);
+}
+.mfa-modal .btn-cancel:hover { border-color: rgba(239,68,68,0.35); color: #f87171; }

@@ -1,0 +1,87 @@
+.file-card {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  background: #f8f9ff;
+  border-radius: 12px;
+  border: 2px solid #e0e0e0;
+  transition: all 0.3s;
+}
+
+.file-card:hover {
+  border-color: #667eea;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.2);
+}
+
+.file-icon {
+  font-size: 3rem;
+}
+
+.file-info {
+  flex: 1;
+}
+
+.file-info h3 {
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.file-meta {
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.file-description {
+  color: #666;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+
+.file-downloads {
+  color: #667eea;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.file-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.file-actions button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s;
+}
+
+.btn-download {
+  background: #667eea;
+  color: white;
+}
+
+.btn-download:hover {
+  background: #5568d3;
+}
+
+.btn-share {
+  background: #28a745;
+  color: white;
+}
+
+.btn-share:hover {
+  background: #218838;
+}
+
+.btn-delete {
+  background: #dc3545;
+  color: white;
+}
+
+.btn-delete:hover {
+  background: #c82333;
+}
